@@ -12,20 +12,32 @@ severo <- getbb("severomorsk")
 big_streets <- severo %>%
   opq() %>%
   add_osm_feature(key = "highway", 
-                  value = c("motorway", "primary", "motorway_link", "primary_link")) %>%
+                  value = c("motorway"
+                            , "primary"
+                            , "motorway_link"
+                            , "primary_link")
+                 ) %>%
   osmdata_sf()
 
 med_streets <- severo %>%
   opq() %>%
   add_osm_feature(key = "highway", 
-                  value = c("secondary", "tertiary", "secondary_link", "tertiary_link")) %>%
+                  value = c("secondary"
+                            , "tertiary"
+                            , "secondary_link"
+                            , "tertiary_link")
+                 ) %>%
   osmdata_sf()
 
 small_streets <- severo %>%
   opq() %>%
   add_osm_feature(key = "highway", 
-                  value = c("residential", "living_street", "unclassified", "service", "footway"
-                  )) %>%
+                  value = c("residential"
+                            , "living_street"
+                            , "unclassified"
+                            , "service"
+                            , "footway")
+                 ) %>%
   osmdata_sf()
 
 water <- severo %>%
@@ -84,7 +96,17 @@ ggplot() +
   theme_void() +
   theme(panel.background = element_rect(fill = 'white', color = 'black')
         , plot.title = element_text(vjust = - 11)
-        , plot.subtitle = element_text(vjust = - 30)) +
-  theme(plot.title = element_text(size = 20, family = "lato", face="bold", hjust=.5),
-        plot.subtitle = element_text(family = "lato", size = 8, hjust=.5, margin=margin(2, 0, 5, 0))) +
+        , plot.subtitle = element_text(vjust = - 30)
+       ) +
+  theme(plot.title = element_text(size = 20
+                                  , family = "lato"
+                                  , face="bold"
+                                  , hjust=.5
+                                 ),
+        plot.subtitle = element_text(family = "lato"
+                                     , size = 8
+                                     , hjust=.5
+                                     , margin=margin(2, 0, 5, 0)
+                                    )
+       ) +
   labs(title = "SEVEROMORSK", subtitle = "69.067°N/33.415°E")
