@@ -8,6 +8,10 @@
 
 [<img src="images/KOTLAS.png" width="100%" />](https://github.com/TrevorFrench/maps/tree/main/kotlas)
 
+### SE Salt Lake Valley
+
+[<img src="images/SE-Salt-Lake-Valley.png" width="100%" />](https://github.com/TrevorFrench/maps/tree/main/salt-lake-valley)
+
 ### RESOURCES
 [STREET MAPS](https://taraskaduk.com/posts/2021-01-18-print-street-maps/)
 
